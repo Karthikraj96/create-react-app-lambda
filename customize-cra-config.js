@@ -1,4 +1,4 @@
-import { override, addLessLoader, fixBabelImports } from 'customize-cra';
+import { override, addLessLoader, fixBabelImports,overrideDevServer } from 'customize-cra';
 import hotLoader from 'react-app-rewire-hot-loader';
 import { theme } from './src/config/theme/themeVariables';
 
@@ -10,12 +10,16 @@ const supportMjs = () => webpackConfig => {
     options: {
       modules: true, // must add this
     },
+    // devServer: {
+    //   historyApiFallback: true,
+    // },
     // type: 'javascript/auto',
   });
+  // webpackConfig
   return webpackConfig;
 };
 
-module.exports = override(
+module.exports = { webpack: override(
   addLessLoader({
     javascriptEnabled: true,
     modifyVars: {
@@ -37,4 +41,9 @@ module.exports = override(
   (config, env) => {
     return hotLoader(config, env);
   },
-);
+),
+devServer: overrideDevServer(
+  // dev server plugin
+  {historyApiFallback: true}
+)
+}
