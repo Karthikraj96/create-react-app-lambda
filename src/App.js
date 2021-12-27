@@ -1,50 +1,59 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import React, { useEffect, useState } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { hot } from 'react-hot-loader/root';
+import { Provider, useSelector} from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
+import { ConfigProvider } from 'antd';
+import store from './redux/store';
+import Admin from './routes/admin';
+import Auth from './routes/auth';
+import './static/css/style.css';
+import config from './config/config';
+import ProtectedRoute from './components/utilities/protectedRoute';
+import Content from './container/stream/lessonContent';
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
-  }
 
-  handleClick = api => e => {
-    e.preventDefault()
+const { theme } = config;
 
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
-
-  render() {
-    const { loading, msg } = this.state
-
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
+const ProviderConfig = () => {
+  const { rtl, isLoggedIn, topMenu, darkMode } = useSelector(state => {
+    return {
+      darkMode: state.ChangeLayoutMode.data,
+      rtl: state.ChangeLayoutMode.rtlData,
+      topMenu: state.ChangeLayoutMode.topMenu,
+      isLoggedIn: state.auth.login,
+    };
+  });
+  const [path, setPath] = useState(window.location.pathname);
+  useEffect(() => {
+    let unmounted = false;
+    if (!unmounted) {
+      setPath(window.location.pathname);
+    }
+    // eslint-disable-next-line no-return-assign
+    return () => (unmounted = true);
+  }, [setPath,isLoggedIn]);
+  return (
+    <ConfigProvider direction={rtl ? 'rtl' : 'ltr'}>
+      <ThemeProvider theme={{ ...theme, rtl, topMenu, darkMode }}>
+        <Router basename={process.env.PUBLIC_URL}>
+          {!isLoggedIn ? <Route path="/" component={Auth} /> : <ProtectedRoute path="/admin" component={Admin} />}
+          {isLoggedIn && (path === process.env.PUBLIC_URL || path === `${process.env.PUBLIC_URL}/`) && (
+            <Redirect to="/admin" />
+          )}
+          <Route exact path="/content" component={Content} />
+        </Router>
+      </ThemeProvider>
+    </ConfigProvider>
+  );
+};
+function App() {
+  return (
+    <Provider store={store}>
+      <ProviderConfig />
+    </Provider>
+  );
 }
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
-    )
-  }
-}
-
-export default App
+export default hot(App);

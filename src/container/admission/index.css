@@ -1,0 +1,366 @@
+.card_div_collection {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* height: 150px; */
+  /* width: 350px; */
+}
+.card_div_collection > h5 {
+  font-size: 3.14rem !important;
+}
+.card_div_collection_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* modal css */
+.btn_div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.btn_div_cancel {
+  margin-right: 12px;
+}
+.modal-title {
+  color: #c3272b !important;
+  font-weight: 600 !important;
+}
+.expericence_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* designation css */
+
+/* .designation_btn_div_cancel{
+    mar
+} */
+
+/* employess css */
+.create_employee_btn_div {
+  display: flex;
+  /* align-items: flex-end;
+    justify-content: flex-end; */
+
+  /* margin-top: 12px; */
+}
+.create_employee_btn_div .btn-outline-primary:hover {
+  background-color: rgb(252, 241, 241) !important;
+  font-weight: 600;
+}
+.settings_department_div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.settings_department_div_cancel {
+  margin-right: 12px;
+}
+
+/* main css */
+.createmodel_attendence_div {
+  margin: 12px;
+}
+.attendence_card_title {
+  padding: 12px;
+}
+.card-title {
+  color: #c3272b !important;
+}
+.create_attendence_search_position {
+  position: absolute;
+  top: 1px;
+  right: 12px !important;
+  z-index: 2;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.editclose_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2%;
+}
+.edit_attendence_label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #c3272b;
+}
+.card_content_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 2%;
+}
+.card_content_div .card-header {
+  background-color: #e6e6e5 !important;
+}
+.card_body_shadow {
+  box-shadow: 1px 2px 20px lightgrey;
+}
+.card_content_div .card {
+  border: 2px solid whitesmoke !important;
+  margin-bottom: 12px !important;
+}
+.create_btn_class {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.icon_div_class {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.title_subject {
+  color: #c3272b;
+  font-weight: 600;
+  padding: 12px;
+}
+.teacher_btn_div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.setting_icons_application {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.table_content_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2%;
+}
+.sms_div {
+  display: flex;
+  margin-right: 12px;
+}
+.level_wise {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 40%;
+}
+.upload_down_icon {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+.icon_top_corner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 6px;
+}
+.row_page_divison {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 12px;
+}
+.row_page_divison .css-yk16xz-control {
+  width: 75px !important;
+}
+.row_label {
+  margin-right: 12px;
+}
+.card_div_collection {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 150px;
+  /* width: 350px; */
+}
+.card_div_collection > h5 {
+  font-size: 3.14rem !important;
+}
+.card_div_collection_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.fee_download_modal_div {
+  margin: 2%;
+}
+.fee_download_title_div {
+  background: #e6e6e5;
+  padding: 5px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.fee_download_title_content {
+  color: #c3272b;
+}
+.fee_download_title_div_main {
+  background-color: whitesmoke;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+.fee_download_modal_logo {
+  display: flex;
+}
+.fee_download_modal_logo_content {
+  margin-left: 12px;
+}
+.fee_download_modal_logo_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+.download_modal_title {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #c3272b;
+}
+.footer_download_modal {
+  padding: 12px;
+}
+.footer_download_modal_lable {
+  font-size: 14px;
+}
+.footer_download_row {
+  padding: 6px;
+}
+.reminder_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  border-radius: 4px;
+  background-color: #e6e6e5;
+  width: 100%;
+}
+.fee_setting {
+  border-radius: 4px;
+  background-color: #e6e6e5;
+  width: 100%;
+  padding: 12px;
+}
+.coursefee_div {
+  border-radius: 4px;
+  background-color: #e6e6e5;
+  width: 100%;
+  padding: 12px;
+}
+.rpp_div {
+  border-radius: 4px;
+  /* background-color: #e6e6e5; */
+  width: 100%;
+  padding: 12px;
+}
+
+.reminder_card_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reminder_card__title_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reminder_footer {
+  padding: 12px;
+}
+.reminder_footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment_setting_top_btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 12px;
+}
+.payment_setting_modal_label {
+  font-size: 16px;
+}
+.field_span {
+  color: red;
+}
+.another_main_card {
+  padding: 12px;
+}
+.another_main_col_div {
+  position: relative;
+  top: 45px;
+}
+.another_main_col_div_action {
+  position: relative;
+  top: 55px;
+}
+.three_header_div {
+  border-radius: 4px;
+  background-color: #e6e6e5;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.three_title {
+  color: #fd868c;
+}
+.four_header_div {
+  border-radius: 4px;
+  background-color: #e6e6e5;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.total_course_fee {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  padding: 6px;
+  margin-bottom: 6px;
+}
+.total_course_fee_amt {
+  position: absolute;
+  top: 60px;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  padding: 6px;
+  margin-bottom: 6px;
+  width: 400px;
+}
+.confirm_course_fee_btn .btn .btn-secondary {
+  background-color: #007bff !important ;
+}
+.course_footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.fee_setting_card_one_label {
+  font-size: 16px;
+}
+.fee_setting_card_one_btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 12px;
+}
+.fee_setting_card_one {
+  padding: 12px;
+}
+.ant-upload-list-picture-card-container {
+  float: none;
+  width: 104px;
+  height: 104px;
+  margin: 0 8px 8px 0;
+}
