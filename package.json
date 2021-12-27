@@ -83,7 +83,7 @@
     "use-state-ref": "^1.0.0",
     "xlsx": "^0.16.9"
   },
-  "homepage": "http://Karthikraj96.github.io/create-react-app-lambda",
+  "homepage": "/",
   "scripts": {
     "start": "react-app-rewired start",
     "build": "set \"GENERATE_SOURCEMAP=false\" && react-app-rewired build",
